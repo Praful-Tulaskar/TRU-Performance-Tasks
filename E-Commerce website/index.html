@@ -1,0 +1,1494 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Electro - e-commerce website</title>
+
+</head>
+
+<body id="maincontent">
+
+    <button type="button" class="btn btn-primary btn darkmode-btn" onclick="toggleMode()">Dark Mode</button>
+
+    <header>
+
+        <div class="header">
+
+
+            <nav class="navbar navbar-light">
+                <div class="container-fluid">
+                    <span class="navbar-brand mb-0 logo"><i class="fa-solid fa-bars ms-2 me-3"></i>electro</span>
+                    <span class="navbar-brand mb-0 nav-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-regular fa-user"></i>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </span>
+                </div>
+            </nav>
+        </div>
+
+        <div class="header-1">
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <ul class="navbar-nav">
+                        <li class="navbar-item mx-sm-3">
+                            <div><i class="fa-solid fa-phone left-nav-icon"></i>
+                                <span class="ms-1 mode">+060 (800) 801-858</span>
+                            </div>
+                        </li>
+                        <li class="navbar-item mx-sm-3">
+                            <div><i class="fa-regular fa-envelope left-nav-icon"></i>
+                                <span class="ms-1 mode">info@electro.com</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav right-nav">
+                        <li class="navbar-item mx-sm-2 pe-4">
+                            <div><i class="fa-solid fa-location-dot mode"></i>
+                                <span class="ms-1 mode">Store Locator</span>
+                            </div>
+                        </li>
+                        <li class="navbar-item mx-sm-2 pe-4">
+                            <div><i class="fa-solid fa-truck-fast mode"></i>
+                                <span class="ms-1 mode">Track Your Order</span>
+                            </div>
+                        </li>
+                        <li class="navbar-item mx-sm-2 pe-4">
+                            <div><i class="fa-solid fa-dollar-sign mode"></i>
+                                <span class="ms-1"><select>
+                                        <option>Dollar(US)</option>
+                                        <option>Rupee(IN)</option>
+                                    </select></span>
+                            </div>
+                        </li>
+                        <li class="navbar-item mx-sm-2">
+                            <div><i class="fa-regular fa-user mode"></i>
+                                <span class="ms-1 mode">Register or Sign in</span>
+                            </div>
+                        </li>
+                        <!-- <li class="navbar-item mx-sm-1">
+                            <button type="button" class="btn btn-primary btn-sm darkmode-btn" onclick="toggleMode()">Dark Mode</button>
+                        </li> -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <hr class="header-hr mode">
+
+        <div class="header-2 pt-2">
+
+            <nav class="navbar navbar-expand-sm header-2-nav">
+                <div class="container">
+                    <ul class="navbar-nav align-middle">
+                        <li class="navbar-item mx-sm-3 logo">
+                            <div>
+                                <img src="image/logo.PNG" alt="logo image" />
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav align-middle header-2-right-nav">
+                        <li class="navbar-item mx-sm-3">
+                            <div>
+                                <i class="fa-solid fa-bars mt-2 mode"></i>
+                            </div>
+                        </li>
+                        <li class="navbar-item mx-sm-3">
+                            <form action="">
+                                <div class="btn-toolbar header-2-search" role="toolbar"
+                                    aria-label="Toolbar with button groups">
+                                    <div class="input-group">
+                                        <input type="text" class="px-4 pe-5" placeholder="Search for products"
+                                            aria-label="Input group example" aria-describedby="btnGroupAddon">
+                                        <div class="btn-group ps-5 search-dropdown bg-mode" role="group">
+                                            <button type="button" class="btn dropdown-toggle ps-4 me-3 bg-mode"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                All Categories
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn input-group-text" id="btnGroupAddon" type="submit"><i
+                                                class="fa-solid fa-magnifying-glass mt-1 px-2"></i></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="navbar-item mx-sm-3 pt-2 header-2-nav-symbol">
+                            <div>
+                                <i class="fa-solid fa-arrows-rotate mode"></i>
+                            </div>
+                        </li>
+                        <li class="navbar-item mx-sm-3 pt-2 header-2-nav-symbol">
+                            <div>
+                                <i class="fa-regular fa-heart mode"></i>
+                            </div>
+                        </li>
+                        <li class="navbar-item mx-sm-3 pt-2 header-2-nav-symbol">
+                            <div>
+                                <i class="fa-solid fa-bag-shopping mode"><span
+                                        class="position-absolute bottom-0 start-10 translate-middle badge rounded-pill">4</span></i>
+                            </div>
+                        </li>
+                        <li class="navbar-item mx-sm-3 pt-2 mode">
+                            <div>
+                                <sup>$</sup>3&nbsp;215.99
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="navbar navbar-expand-sm mt-4 pb-0">
+                <div class="container">
+
+                    <ul class="navbar-nav me-3">
+                        <li class="navbar-item mx-sm-3">
+                            <div class="dropdown">
+                                <button class="p-2 px-3 all-dep-btn" id="dropdownMenuButton" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><i
+                                        class="fa-solid fa-bars mx-2"></i>
+                                    All Departments
+                                </button>
+                                <ul class="dropdown-menu px-2 header-2-dropdown show p-0 m-0"
+                                    aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item fw-bold" href="#">Value of the Day</a></li>
+                                    <hr class="dropdown-divider">
+                                    <li><a class="dropdown-item fw-bold" href="#">Top 100 Offers</a></li>
+                                    <hr class="dropdown-divider">
+                                    <li><a class="dropdown-item fw-bold" href="#">New Arrivals</a></li>
+                                    <hr class="dropdown-divider">
+                                    <li>
+                                        <a href="#" class="dropdown-item d-flex justify-content-between">
+                                            <div>Laptops & Computers</div>
+                                            <div>&#10095;</div>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <!-- Dropdown menu links -->
+                                        </ul>
+                                    </li>
+                                    <hr class="dropdown-divider">
+                                    <li class="btn-group dropend d-flex justify-content-between">
+
+                                        <a href="#" class="dropdown-item d-flex justify-content-between">
+                                            <div>Cameras & Photography</div>
+                                            <div>&#10095;</div>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <!-- Dropdown menu links -->
+                                        </ul>
+
+                                    </li>
+                                    <hr class="dropdown-divider">
+                                    <li>
+                                        <a href="#" class="dropdown-item d-flex justify-content-between">
+                                            <div>Smart Phones & Tablets</div>
+                                            <div>&#10095;</div>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <!-- Dropdown menu links -->
+                                        </ul>
+                                    </li>
+                                    <hr class="dropdown-divider">
+                                    <li>
+                                        <a href="#" class="dropdown-item d-flex justify-content-between">
+                                            <div>Video Games & Consoles</div>
+                                            <div>&#10095;</div>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <!-- Dropdown menu links -->
+                                        </ul>
+                                    </li>
+                                    <hr class="dropdown-divider">
+                                    <li>
+                                        <a href="#" class="dropdown-item d-flex justify-content-between">
+                                            <div>TV & Audio</div>
+                                            <div>&#10095;</div>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <!-- Dropdown menu links -->
+                                        </ul>
+                                    </li>
+                                    <hr class="dropdown-divider">
+                                    <li>
+                                        <a href="#" class="dropdown-item d-flex justify-content-between">
+                                            <div>Gadgets</div>
+                                            <div>&#10095;</div>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <!-- Dropdown menu links -->
+                                        </ul>
+                                    </li>
+                                    <hr class="dropdown-divider">
+                                    <li>
+                                        <a href="#" class="dropdown-item d-flex justify-content-between">
+                                            <div>Car Electronic & GPS</div>
+                                            <div>&#10095;</div>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <!-- Dropdown menu links -->
+                                        </ul>
+                                    </li>
+                                    <hr class="dropdown-divider">
+                                    <li>
+                                        <a href="#" class="dropdown-item d-flex justify-content-between">
+                                            <div>Accesories</div>
+                                            <div>&#10095;</div>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <li><a href="#" class="dropdown-item">Submenu item 1</a></li>
+                                            <!-- Dropdown menu links -->
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <nav class="nav header-2-nav-2">
+                        <a class="nav-link mode" aria-current="page" href="#">SuperDeals</a>
+                        <a class="nav-link mode" href="#">Top 10 Printers</a>
+                        <a class="nav-link mode" href="#">Featured Brands</a>
+                        <a class="nav-link mode" href="#">Trending Styles</a>
+                        <a class="nav-link mode" href="#">Gift Cards</a>
+                        <a class="nav-link mode" href="#">Blog</a>
+                        <a class="nav-link mode disabled ms-4" aria-disabled="true">Free Shipping on Orders $50+</a>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="banner-section">
+
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="image/banner3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/banner2.jfif" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/banner3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="container my-3 py-3 d-flex justify-content-between section-2">
+
+            <div class="col-md-4 col-12"><img src="image/section-2 img-1.PNG" alt="section-2 image-1" /></div>
+            <div class="col-md-4 col-12"><img src="image/section-2 img-2.PNG" alt="section-2 image-2" /></div>
+            <div class="col-md-4 col-12"><img src="image/section-2 img-3.PNG" alt="section-2 image-3" /></div>
+
+        </section>
+
+        <section class="container section-3">
+
+            <div class="d-flex">
+                <div class="me-3 section-3-subsection-1"><img src="image/section-3-img-1.PNG" alt="section-3-img-1"
+                        class="image-fluid" /></div>
+                <div>
+                    <div>
+                        <ul class="nav justify-content-center mb-0 pb-0" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true">Featured</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">On Sale</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                    aria-controls="contact-tab-pane" aria-selected="false">Top Rated</button>
+                            </li>
+                        </ul>
+                        <hr class="mt-0 pt-0 mode">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                aria-labelledby="home-tab" tabindex="0">
+                                <div class="d-flex flex-wrap mt-3 section-3-subsection-2">
+
+
+                                    <!-- <div class="col py-2 sect-7-card">
+                                        <div class="row py-2">
+                                            <div class="col card-row-1">Audio Speakers</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col card-row-2">Wireless Audio System Multiroom 360</div>
+                                        </div>
+                                        <div class="row py-4">
+                                            <div class="col-2 py-4 onhover">&#10094;</div>
+                                            <div class="col section-3-card-img"><img src="image/section-3-img-2.1.PNG" alt="section 7 image 1"
+                                                    class="image-fluid" />
+                                            </div>
+                                            <div class="col-2 py-4 onhover">&#10095;</div>
+                                        </div>
+                                        <div class="row pb-3">
+                                            <div class="col-8">$2,299.00</div>
+                                            <div class="col card-row-4"><i class="fa-solid fa-cart-shopping"></i></div>
+                                        </div>
+                                        <hr class="mt-0 pt-0 onhover">
+                                        <div class="row onhover">
+                                            <div class="col"><span class="me-1"><i class="fa-solid fa-code-compare fa-rotate-90"></i></span>Compare
+                                            </div>
+                                            <div class="col"><span class="me-1"><i class="fa-regular fa-heart"></i></span>Wishlist</div>
+                                        </div>
+                                    </div> -->
+
+                                    <div><img src="image/section-3-img-2.PNG" alt="section-3-img-2"
+                                            class="image-fluid" /></div>
+                                    <div><img src="image/section-3-img-5.PNG" alt="section-3-img-3"
+                                            class="image-fluid" /></div>
+                                    <div><img src="image/section-3-img-4.PNG" alt="section-3-img-4"
+                                            class="image-fluid" /></div>
+                                    <div><img src="image/section-3-img-5.PNG" alt="section-3-img-5"
+                                            class="image-fluid" /></div>
+                                    <div><img src="image/section-3-img-2.PNG" alt="section-3-img-6"
+                                            class="image-fluid" /></div>
+                                    <div><img src="image/section-3-img-7.PNG" alt="section-3-img-7"
+                                            class="image-fluid" /></div>
+
+                                    <div class="section-3-extra"><img src="image/section-3-img-2.PNG"
+                                            alt="section-3-img-2" class="image-fluid" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-5.PNG"
+                                            alt="section-3-img-3" class="image-fluid" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-4.PNG"
+                                            alt="section-3-img-4" class="image-fluid mt-1" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-5.PNG"
+                                            alt="section-3-img-5" class="image-fluid" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-2.PNG"
+                                            alt="section-3-img-6" class="image-fluid" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-7.PNG"
+                                            alt="section-3-img-7" class="image-fluid" /></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">
+                                <div class="d-flex flex-wrap mt-3 section-3-subsection-2">
+                                    <div><img src="image/section-3-img-2.PNG" alt="section-3-img-2"
+                                            class="image-fluid" /></div>
+                                    <div><img src="image/section-3-img-5.PNG" alt="section-3-img-3"
+                                            class="image-fluid mt-3" /></div>
+                                    <div><img src="image/section-3-img-4.PNG" alt="section-3-img-4"
+                                            class="image-fluid mt-1" /></div>
+                                    <div><img src="image/section-3-img-5.PNG" alt="section-3-img-5"
+                                            class="image-fluid mt-3" /></div>
+                                    <div><img src="image/section-3-img-2.PNG" alt="section-3-img-6"
+                                            class="image-fluid" /></div>
+                                    <div><img src="image/section-3-img-7.PNG" alt="section-3-img-7"
+                                            class="image-fluid mt-3" /></div>
+
+                                    <div class="section-3-extra"><img src="image/section-3-img-2.PNG"
+                                            alt="section-3-img-2" class="image-fluid" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-5.PNG"
+                                            alt="section-3-img-3" class="image-fluid" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-4.PNG"
+                                            alt="section-3-img-4" class="image-fluid mt-1" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-5.PNG"
+                                            alt="section-3-img-5" class="image-fluid" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-2.PNG"
+                                            alt="section-3-img-6" class="image-fluid" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-7.PNG"
+                                            alt="section-3-img-7" class="image-fluid" /></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
+                                aria-labelledby="contact-tab" tabindex="0">
+                                <div class="d-flex flex-wrap mt-3 section-3-subsection-2">
+                                    <div><img src="image/section-3-img-2.PNG" alt="section-3-img-2"
+                                            class="image-fluid" /></div>
+                                    <div><img src="image/section-3-img-5.PNG" alt="section-3-img-3"
+                                            class="image-fluid mt-3" /></div>
+                                    <div><img src="image/section-3-img-4.PNG" alt="section-3-img-4"
+                                            class="image-fluid mt-1" /></div>
+                                    <div><img src="image/section-3-img-5.PNG" alt="section-3-img-5"
+                                            class="image-fluid mt-3" /></div>
+                                    <div><img src="image/section-3-img-2.PNG" alt="section-3-img-6"
+                                            class="image-fluid" /></div>
+                                    <div><img src="image/section-3-img-7.PNG" alt="section-3-img-7"
+                                            class="image-fluid mt-3" /></div>
+
+                                    <div class="section-3-extra"><img src="image/section-3-img-2.PNG"
+                                            alt="section-3-img-2" class="image-fluid" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-5.PNG"
+                                            alt="section-3-img-3" class="image-fluid" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-4.PNG"
+                                            alt="section-3-img-4" class="image-fluid mt-1" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-5.PNG"
+                                            alt="section-3-img-5" class="image-fluid" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-2.PNG"
+                                            alt="section-3-img-6" class="image-fluid" /></div>
+                                    <div class="section-3-extra"><img src="image/section-3-img-7.PNG"
+                                            alt="section-3-img-7" class="image-fluid" /></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- <div class="d-flex flex-wrap mt-3 section-3-subsection-2">
+                        <div><img src="image/section-3-img-2.PNG" alt="section-3-img-2" class="image-fluid" /></div>
+                        <div><img src="image/section-3-img-3.PNG" alt="section-3-img-3" class="image-fluid" /></div>
+                        <div><img src="image/section-3-img-4.PNG" alt="section-3-img-4" class="image-fluid" /></div>
+                        <div><img src="image/section-3-img-5.PNG" alt="section-3-img-5" class="image-fluid" /></div>
+                        <div><img src="image/section-3-img-6.PNG" alt="section-3-img-6" class="image-fluid mt-2" /></div>
+                        <div><img src="image/section-3-img-7.PNG" alt="section-3-img-7" class="image-fluid" /></div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section-4 section-4-bg-mode">
+
+            <div class="container">
+                <div>
+                    <ul class="nav justify-content-between" id="myTab2" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="best-deal-tab" data-bs-toggle="tab"
+                                data-bs-target="#best-deal-tab-pane" type="button" role="tab"
+                                aria-controls="home-tab-pane" aria-selected="true">Best&nbsp;Deals</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tv-tab" data-bs-toggle="tab" data-bs-target="#tv-tab-pane"
+                                type="button" role="tab" aria-controls="profile-tab-pane"
+                                aria-selected="false">TV&nbsp;&&nbsp;Video</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="camera-tab" data-bs-toggle="tab"
+                                data-bs-target="#cameras-tab-pane" type="button" role="tab"
+                                aria-controls="contact-tab-pane" aria-selected="false">Cameras</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="audio-tab" data-bs-toggle="tab"
+                                data-bs-target="#audio-tab-pane" type="button" role="tab"
+                                aria-controls="contact-tab-pane" aria-selected="false">Audio</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="cell-phone-tab" data-bs-toggle="tab"
+                                data-bs-target="#cell-phone-tab-pane" type="button" role="tab"
+                                aria-controls="contact-tab-pane" aria-selected="false">Cell&nbsp;Phones</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="gps-tab" data-bs-toggle="tab" data-bs-target="#gps-tab-pane"
+                                type="button" role="tab" aria-controls="contact-tab-pane"
+                                aria-selected="false">GPS&nbsp;&&nbsp;Navi</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="computer-tab" data-bs-toggle="tab"
+                                data-bs-target="#computer-tab-pane" type="button" role="tab"
+                                aria-controls="contact-tab-pane" aria-selected="false">Computers</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="portable-tab" data-bs-toggle="tab"
+                                data-bs-target="#portable-tab-pane" type="button" role="tab"
+                                aria-controls="contact-tab-pane" aria-selected="false">Portable&nbsp;Audio</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="accesories-tab" data-bs-toggle="tab"
+                                data-bs-target="#accesories-tab-pane" type="button" role="tab"
+                                aria-controls="contact-tab-pane" aria-selected="false">Accesoriess</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="laptop-tab" data-bs-toggle="tab"
+                                data-bs-target="#laptops-tab-pane" type="button" role="tab"
+                                aria-controls="contact-tab-pane" aria-selected="false">Laptops</button>
+                        </li>
+                    </ul>
+                    <hr class="mt-0 pt-0 mode">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="best-deal-tab-pane" role="tabpanel"
+                            aria-labelledby="best-deal-tab" tabindex="0">
+                            <div class="d-flex section-4-img-container">
+                                <div>
+                                    <div><img src="image/section-4-img-1.PNG" alt="section 4 image" />
+                                    </div>
+                                    <div><img src="image/section-4-img-2.PNG" alt="section 4 image" /></div>
+                                </div>
+                                <div><img src="image/section-4-img-3.PNG" alt="section 4 image" /></div>
+                                <div>
+                                    <div><img src="image/section-4-img-4.PNG" alt="section 4 image" /></div>
+                                    <div><img src="image/section-4-img-5.PNG" alt="section 4 image" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tv-tab-pane" role="tabpanel" aria-labelledby="tv-tab"
+                            tabindex="0">
+                            <div class="d-flex section-4-img-container">
+                                <div>
+                                    <div><img src="image/section-4-img-1.PNG" alt="section 4 image" class="mb-2" />
+                                    </div>
+                                    <div><img src="image/section-4-img-2.PNG" alt="section 4 image" /></div>
+                                </div>
+                                <div><img src="image/section-4-img-3.PNG" alt="section 4 image" /></div>
+                                <div>
+                                    <div><img src="image/section-4-img-4.PNG" alt="section 4 image" /></div>
+                                    <div><img src="image/section-4-img-5.PNG" alt="section 4 image" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="cameras-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                            tabindex="0">
+                            <div class="d-flex section-4-img-container">
+                                <div>
+                                    <div><img src="image/section-4-img-1.PNG" alt="section 4 image" class="mb-2" />
+                                    </div>
+                                    <div><img src="image/section-4-img-2.PNG" alt="section 4 image" /></div>
+                                </div>
+                                <div><img src="image/section-4-img-3.PNG" alt="section 4 image" /></div>
+                                <div>
+                                    <div><img src="image/section-4-img-4.PNG" alt="section 4 image" /></div>
+                                    <div><img src="image/section-4-img-5.PNG" alt="section 4 image" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="audio-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                            tabindex="0">
+                            <div class="d-flex section-4-img-container">
+                                <div>
+                                    <div><img src="image/section-4-img-1.PNG" alt="section 4 image" class="mb-2" />
+                                    </div>
+                                    <div><img src="image/section-4-img-2.PNG" alt="section 4 image" /></div>
+                                </div>
+                                <div><img src="image/section-4-img-3.PNG" alt="section 4 image" /></div>
+                                <div>
+                                    <div><img src="image/section-4-img-4.PNG" alt="section 4 image" /></div>
+                                    <div><img src="image/section-4-img-5.PNG" alt="section 4 image" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="cell-phone-tab-pane" role="tabpanel"
+                            aria-labelledby="contact-tab" tabindex="0">
+                            <div class="d-flex section-4-img-container">
+                                <div>
+                                    <div><img src="image/section-4-img-1.PNG" alt="section 4 image" class="mb-2" />
+                                    </div>
+                                    <div><img src="image/section-4-img-2.PNG" alt="section 4 image" /></div>
+                                </div>
+                                <div><img src="image/section-4-img-3.PNG" alt="section 4 image" /></div>
+                                <div>
+                                    <div><img src="image/section-4-img-4.PNG" alt="section 4 image" /></div>
+                                    <div><img src="image/section-4-img-5.PNG" alt="section 4 image" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="gps-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                            tabindex="0">
+                            <div class="d-flex section-4-img-container">
+                                <div>
+                                    <div><img src="image/section-4-img-1.PNG" alt="section 4 image" class="mb-2" />
+                                    </div>
+                                    <div><img src="image/section-4-img-2.PNG" alt="section 4 image" /></div>
+                                </div>
+                                <div><img src="image/section-4-img-3.PNG" alt="section 4 image" /></div>
+                                <div>
+                                    <div><img src="image/section-4-img-4.PNG" alt="section 4 image" /></div>
+                                    <div><img src="image/section-4-img-5.PNG" alt="section 4 image" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="computer-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                            tabindex="0">
+                            <div class="d-flex section-4-img-container">
+                                <div>
+                                    <div><img src="image/section-4-img-1.PNG" alt="section 4 image" class="mb-2" />
+                                    </div>
+                                    <div><img src="image/section-4-img-2.PNG" alt="section 4 image" /></div>
+                                </div>
+                                <div><img src="image/section-4-img-3.PNG" alt="section 4 image" /></div>
+                                <div>
+                                    <div><img src="image/section-4-img-4.PNG" alt="section 4 image" /></div>
+                                    <div><img src="image/section-4-img-5.PNG" alt="section 4 image" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="portable-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                            tabindex="0">
+                            <div class="d-flex section-4-img-container">
+                                <div>
+                                    <div><img src="image/section-4-img-1.PNG" alt="section 4 image" class="mb-2" />
+                                    </div>
+                                    <div><img src="image/section-4-img-2.PNG" alt="section 4 image" /></div>
+                                </div>
+                                <div><img src="image/section-4-img-3.PNG" alt="section 4 image" /></div>
+                                <div>
+                                    <div><img src="image/section-4-img-4.PNG" alt="section 4 image" /></div>
+                                    <div><img src="image/section-4-img-5.PNG" alt="section 4 image" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="accesories-tab-pane" role="tabpanel"
+                            aria-labelledby="contact-tab" tabindex="0">
+                            <div class="d-flex section-4-img-container">
+                                <div>
+                                    <div><img src="image/section-4-img-1.PNG" alt="section 4 image" class="mb-2" />
+                                    </div>
+                                    <div><img src="image/section-4-img-2.PNG" alt="section 4 image" /></div>
+                                </div>
+                                <div><img src="image/section-4-img-3.PNG" alt="section 4 image" /></div>
+                                <div>
+                                    <div><img src="image/section-4-img-4.PNG" alt="section 4 image" /></div>
+                                    <div><img src="image/section-4-img-5.PNG" alt="section 4 image" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="laptops-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                            tabindex="0">
+                            <div class="d-flex section-4-img-container">
+                                <div>
+                                    <div><img src="image/section-4-img-1.PNG" alt="section 4 image" class="mb-2" />
+                                    </div>
+                                    <div><img src="image/section-4-img-2.PNG" alt="section 4 image" /></div>
+                                </div>
+                                <div><img src="image/section-4-img-3.PNG" alt="section 4 image" /></div>
+                                <div>
+                                    <div><img src="image/section-4-img-4.PNG" alt="section 4 image" /></div>
+                                    <div><img src="image/section-4-img-5.PNG" alt="section 4 image" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="d-flex section-4-img-container">
+                    <div>
+                        <div><img src="image/section-4-img-1.PNG" alt="section 4 image" class="mb-2" /></div>
+                        <div><img src="image/section-4-img-2.PNG" alt="section 4 image" /></div>
+                    </div>
+                    <div><img src="image/section-4-img-3.PNG" alt="section 4 image" /></div>
+                    <div>
+                        <div><img src="image/section-4-img-4.PNG" alt="section 4 image" /></div>
+                        <div><img src="image/section-4-img-5.PNG" alt="section 4 image" /></div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <section class="section-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <ul class="nav bestseller" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="bestsellers-tab" data-bs-toggle="tab"
+                                    data-bs-target="#top20-tab-pane" type="button" role="tab"
+                                    aria-controls="bestsellers-tab-pane" aria-selected="true">Bestsellers</button>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col">
+                        <ul class="nav" id="myTab3" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="top20-tab" data-bs-toggle="tab"
+                                    data-bs-target="#top20-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true">Top&nbsp;20</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="phones-tablet-tab" data-bs-toggle="tab"
+                                    data-bs-target="#phones-tablet-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane"
+                                    aria-selected="true">Phones&nbsp;&&nbsp;Tablets</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="laptops-computers-tab" data-bs-toggle="tab"
+                                    data-bs-target="#laptops-computers-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane"
+                                    aria-selected="true">Laptops&nbsp;&&nbsp;Computers</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="video-cameras-tab" data-bs-toggle="tab"
+                                    data-bs-target="#video-cameras-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true">Video&nbsp;Cameras</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="mt-0 pt-0 mode">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="top20-tab-pane" role="tabpanel"
+                        aria-labelledby="home-tab" tabindex="0">
+                        <div class="row section-5-image">
+                            <div class="col"><img src="image/section-5-img-1.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-2.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-3.PNG" alt="section 5 image" /></div>
+                        </div>
+                        <div class="row section-5-image">
+                            <div class="col"><img src="image/section-5-img-1.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-2.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-3.PNG" alt="section 5 image" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show" id="phones-tablet-tab-pane" role="tabpanel"
+                        aria-labelledby="home-tab" tabindex="0">
+                        <div class="row section-5-image">
+                            <div class="col"><img src="image/section-5-img-1.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-2.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-3.PNG" alt="section 5 image" /></div>
+                        </div>
+                        <div class="row section-5-image">
+                            <div class="col"><img src="image/section-5-img-1.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-2.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-3.PNG" alt="section 5 image" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show" id="laptops-computers-tab-pane" role="tabpanel"
+                        aria-labelledby="home-tab" tabindex="0">
+                        <div class="row section-5-image">
+                            <div class="col"><img src="image/section-5-img-1.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-2.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-3.PNG" alt="section 5 image" /></div>
+                        </div>
+                        <div class="row section-5-image">
+                            <div class="col"><img src="image/section-5-img-1.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-2.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-3.PNG" alt="section 5 image" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show" id="video-cameras-tab-pane" role="tabpanel"
+                        aria-labelledby="home-tab" tabindex="0">
+                        <div class="row section-5-image">
+                            <div class="col"><img src="image/section-5-img-1.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-2.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-3.PNG" alt="section 5 image" /></div>
+                        </div>
+                        <div class="row section-5-image">
+                            <div class="col"><img src="image/section-5-img-1.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-2.PNG" alt="section 5 image" /></div>
+                            <div class="col"><img src="image/section-5-img-3.PNG" alt="section 5 image" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- <div class="row section-5-image">
+                    <div class="col"><img src="image/section-5-img-1.PNG" alt="section 5 image" /></div>
+                    <div class="col"><img src="image/section-5-img-2.PNG" alt="section 5 image" /></div>
+                    <div class="col"><img src="image/section-5-img-3.PNG" alt="section 5 image" /></div>
+                </div>
+                <div class="row section-5-image">
+                    <div class="col"><img src="image/section-5-img-4.PNG" alt="section 5 image" /></div>
+                    <div class="col"><img src="image/section-5-img-5.PNG" alt="section 5 image" /></div>
+                    <div class="col"><img src="image/section-5-img-6.PNG" alt="section 5 image" /></div>
+                </div> -->
+            </div>
+        </section>
+
+        <section class="section-6">
+            <div class="container">
+                <img src="image/section-6-image.PNG" alt="section 6 image" class="img-fluid w-100" />
+            </div>
+        </section>
+
+        <section class="section-7">
+            <div class="container">
+                <div class="row section-7-head">
+                    <div class="col-11 mode">Recently Viewed</div>
+                    <div class="col-1"><button>&#10094; &#10095;</button></div>
+                </div>
+                <hr class="mt-0 pt-0 mode">
+
+                <div class="row section-7-body">
+                    <div class="col py-2 sect-7-card">
+                        <div class="row py-2">
+                            <div class="col card-row-1 mode">Game Consoles</div>
+                        </div>
+                        <div class="row">
+                            <div class="col card-row-2">GameConsole Special Edition</div>
+                        </div>
+                        <div class="row py-4">
+                            <div class="col-2 py-4 onhover">&#10094;</div>
+                            <div class="col-8 cardimg"><img src="image/section-7 img-1.PNG" alt="section 7 image 1"
+                                    class="image-fluid" />
+                            </div>
+                            <div class="col-2 py-4 onhover">&#10095;</div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-8 mode">$789,00</div>
+                            <div class="col card-row-4"><i class="fa-solid fa-cart-shopping"></i></div>
+                        </div>
+                        <hr class="mt-0 pt-0 onhover">
+                        <div class="row onhover">
+                            <div class="col mode"><span class="me-1 mode"><i
+                                        class="fa-solid fa-code-compare fa-rotate-90"></i></span>Compare</div>
+                            <div class="col mode"><span class="me-1 mode"><i class="fa-regular fa-heart"></i></span>Wishlist</div>
+                        </div>
+                    </div>
+                    <div class="col py-2 sect-7-card">
+                        <div class="row py-2">
+                            <div class="col card-row-1 mode">Accesories</div>
+                        </div>
+                        <div class="row">
+                            <div class="col card-row-2">Powerbank 1130 mAh Blue</div>
+                        </div>
+                        <div class="row py-4">
+                            <div class="col-2 py-4 onhover">&#10094;</div>
+                            <div class="col-8 cardimg"><img src="image/section-7 img-2.PNG" alt="section 7 image 1"
+                                    class="image-fluid" />
+                            </div>
+                            <div class="col-2 py-4 onhover">&#10095;</div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-8 mode">$103,00</div>
+                            <div class="col card-row-4"><i class="fa-solid fa-cart-shopping"></i></div>
+                        </div>
+                        <hr class="mt-0 pt-0 onhover">
+                        <div class="row onhover">
+                            <div class="col mode"><span class="me-1 mode"><i
+                                        class="fa-solid fa-code-compare fa-rotate-90"></i></span>Compare</div>
+                            <div class="col mode"><span class="me-1 mode"><i class="fa-regular fa-heart"></i></span>Wishlist</div>
+                        </div>
+                    </div>
+                    <div class="col py-2 sect-7-card sect-7-card-extra">
+                        <div class="row py-2">
+                            <div class="col card-row-1 mode">Laptops</div>
+                        </div>
+                        <div class="row">
+                            <div class="col card-row-2">Laptop Yoga 500 15.6" 6200U 8GB</div>
+                        </div>
+                        <div class="row py-4">
+                            <div class="col-2 py-4 onhover">&#10094;</div>
+                            <div class="col-8 cardimg"><img src="image/section-7 img-3.PNG" alt="section 7 image 1"
+                                    class="image-fluid" />
+                            </div>
+                            <div class="col-2 py-4 onhover">&#10095;</div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-8 mode">$1&nbsp;999,00</div>
+                            <div class="col card-row-4"><i class="fa-solid fa-cart-shopping"></i></div>
+                        </div>
+                        <hr class="mt-0 pt-0 onhover">
+                        <div class="row onhover">
+                            <div class="col mode"><span class="me-1 mode"><i
+                                        class="fa-solid fa-code-compare fa-rotate-90"></i></span>Compare</div>
+                            <div class="col mode"><span class="me-1 mode"><i class="fa-regular fa-heart"></i></span>Wishlist</div>
+                        </div>
+                    </div>
+                    <div class="col py-2 sect-7-card">
+                        <div class="row py-2">
+                            <div class="col card-row-1 mode">Smart Phones</div>
+                        </div>
+                        <div class="row">
+                            <div class="col card-row-2">Smartphone 6S 32GB LTE</div>
+                        </div>
+                        <div class="row py-4">
+                            <div class="col-2 py-4 onhover">&#10094;</div>
+                            <div class="col-8 cardimg"><img src="image/section-7 img-4.PNG" alt="section 7 image 1"
+                                    class="image-fluid" />
+                            </div>
+                            <div class="col-2 py-4 onhover">&#10095;</div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-8 mode">$1&nbsp;300,00</div>
+                            <div class="col card-row-4"><i class="fa-solid fa-cart-shopping"></i></div>
+                        </div>
+                        <hr class="mt-0 pt-0 onhover">
+                        <div class="row onhover">
+                            <div class="col mode"><span class="me-1 mode"><i
+                                        class="fa-solid fa-code-compare fa-rotate-90"></i></span>Compare</div>
+                            <div class="col mode"><span class="me-1 mode"><i class="fa-regular fa-heart"></i></span>Wishlist</div>
+                        </div>
+                    </div>
+                    <div class="col py-2 sect-7-card">
+                        <div class="row py-2">
+                            <div class="col card-row-1 mode">Smartwatches</div>
+                        </div>
+                        <div class="row">
+                            <div class="col card-row-2">Smartwatch 2.0 LTE WiFi</div>
+                        </div>
+                        <div class="row py-4">
+                            <div class="col-2 py-4 onhover">&#10094;</div>
+                            <div class="col-8 cardimg"><img src="image/section-7 img-5.PNG" alt="section 7 image 1"
+                                    class="image-fluid" /></div>
+                            <div class="col-2 py-4 onhover">&#10095;</div>
+                        </div>
+                        <div class="row pb-0 mb-0">
+                            <div class="col-8 text-danger">$129,00</div>
+                            <div class="col card-row-4"><i class="fa-solid fa-cart-shopping"></i></div>
+                        </div>
+                        <div class="row mt-0 pt-0">
+                            <div class="col line-through-price mode">$249,00</div>
+                        </div>
+                        <hr class="mt-0 pt-0 onhover">
+                        <div class="row onhover">
+                            <div class="col mode"><span class="me-1 mode"><i
+                                        class="fa-solid fa-code-compare fa-rotate-90"></i></span>Compare</div>
+                            <div class="col mode"><span class="me-1 mode"><i class="fa-regular fa-heart"></i></span>Wishlist</div>
+                        </div>
+                    </div>
+                    <div class="col py-2 sect-7-card sect-7-card-extra">
+                        <div class="row py-2">
+                            <div class="col card-row-1 mode">Cameras</div>
+                        </div>
+                        <div class="row">
+                            <div class="col card-row-2">Camera C430W 4k Waterproof</div>
+                        </div>
+                        <div class="row py-4">
+                            <div class="col-2 py-4 onhover">&#10094;</div>
+                            <div class="col-8 cardimg"><img src="image/section-7 img-6.PNG" alt="section 7 image 1"
+                                    class="image-fluid" /></div>
+                            <div class="col-2 py-4 onhover">&#10095;</div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-8 mode">$590,00</div>
+                            <div class="col card-row-4"><i class="fa-solid fa-cart-shopping"></i></div>
+                        </div>
+                        <hr class="mt-0 pt-0 onhover">
+                        <div class="row onhover">
+                            <div class="col mode"><span class="me-1 mode"><i
+                                        class="fa-solid fa-code-compare fa-rotate-90"></i></span>Compare</div>
+                            <div class="col mode"><span class="me-1 mode"><i class="fa-regular fa-heart"></i></span>Wishlist</div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">Cameras</p>
+                            <h5 class="card-title">Camera C430W 4k Waterproof</h5>
+                        </div>
+                        <img src="image/section-7 img-6.PNG" class="card-img-top w-100" alt="section 7 image">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">An item</li>
+                          <li class="list-group-item">A second item</li>
+                          <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="#" class="card-link">Card link</a>
+                          <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section-8 py-2">
+            <div class="container">
+                <hr class="mt-0 pt-0 mode">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row d-flex section-8-logos py-2">
+                                <!-- <div class="col-1 logo-image"><button>&#10094;</button></div> -->
+                                <div class="col logo-image"><img src="image/section-8 img-1.PNG" alt="section 8 image"
+                                        class="w-70 image-fluid" /></div>
+                                <div class="col logo-image"><img src="image/section-8 img-2.PNG" alt="section 8 image"
+                                        class="w-70 image-fluid" /></div>
+                                <div class="col logo-image"><img src="image/section-8 img-3.PNG" alt="section 8 image"
+                                        class="w-70 image-fluid" /></div>
+                                <div class="col logo-image logo-image-extra"><img src="image/section-8 img-4.PNG"
+                                        alt="section 8 image" class="w-70 image-fluid" /></div>
+                                <div class="col logo-image logo-image-extra"><img src="image/section-8 img-5.PNG"
+                                        alt="section 8 image" class="w-70 image-fluid mt-1" /></div>
+                                <!-- <div class="col-1 logo-image"><button>&#10095;</button></div> -->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row d-flex section-8-logos py-2">
+                                <!-- <div class="col-1 logo-image"><button>&#10094;</button></div> -->
+                                <div class="col logo-image"><img src="image/section-8 img-1.PNG" alt="section 8 image"
+                                        class="w-70 image-fluid" /></div>
+                                <div class="col logo-image"><img src="image/section-8 img-2.PNG" alt="section 8 image"
+                                        class="w-70 image-fluid" /></div>
+                                <div class="col logo-image"><img src="image/section-8 img-3.PNG" alt="section 8 image"
+                                        class="w-70 image-fluid" /></div>
+                                <div class="col logo-image logo-image-extra"><img src="image/section-8 img-4.PNG"
+                                        alt="section 8 image" class="w-70 image-fluid" /></div>
+                                <div class="col logo-image logo-image-extra"><img src="image/section-8 img-5.PNG"
+                                        alt="section 8 image" class="w-70 image-fluid mt-1" /></div>
+                                <!-- <div class="col-1 logo-image"><button>&#10095;</button></div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon text-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon text-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <hr class="mt-0 pt-0">
+            </div>
+        </section>
+
+        <section class="section-9">
+            <div class="container">
+                <div class="row section-9-container">
+                    <div class="col mb-2">
+                        <div class="row">
+                            <div class="col section-9-head mb-2 mode">Featured Products</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <hr class="mt-0 pt-0 mode">
+                            </div>
+                        </div>
+                        <div class="row my-4 section-9-container">
+                            <div class="col pe-5 section-9-card">
+                                <div class="row">
+                                    <div class="col-4"><img src="image/section-9 img-1.PNG" alt="section 9 image" />
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col product-name">Purple Wireless Headphones Solo 2 HD</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col hidden-element">kkkk</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col mode">$1149,00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4 section-9-container">
+                            <div class="col pe-5 section-9-card">
+                                <div class="row">
+                                    <div class="col-4"><img src="image/section-9 img-2.PNG" alt="section 9 image" />
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col product-name">Powerbank 1130 mAh Blue</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col hidden-element">kkkk</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col mode">$210,00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4 section-9-container">
+                            <div class="col pe-5 section-9-card">
+                                <div class="row">
+                                    <div class="col-4"><img src="image/section-9 img-3.PNG" alt="section 9 image" />
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col product-name">Nerocool EN52377 Dead Silence Gaming Cube Case
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col hidden-element">kkkk</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col mode">$180,00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-2">
+                        <div class="row">
+                            <div class="col section-9-head mb-2 mode">Onsale Products</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <hr class="mt-0 pt-0 mode">
+                            </div>
+                        </div>
+                        <div class="row my-4 section-9-container">
+                            <div class="col pe-5 section-9-card">
+                                <div class="row">
+                                    <div class="col-4"><img src="image/section-9 img-4.PNG" alt="section 9 image" />
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col product-name">Yellow Earphones Waterproof with Bluetooth
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col hidden-element">kkkk</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col mode">$110,00 &nbsp;<span class="discount-price">$250,00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4 section-9-container">
+                            <div class="col pe-5 section-9-card">
+                                <div class="row">
+                                    <div class="col-4"><img src="image/section-9 img-5.PNG" alt="section 9 image" />
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col product-name">Camera C430W 4k Waterproof</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col hidden-element">kkkk</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col mode">$899,00 &nbsp;<span class="discount-price">$1200,00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4 section-9-container">
+                            <div class="col pe-5 section-9-card">
+                                <div class="row">
+                                    <div class="col-4"><img src="image/section-9 img-6.PNG" alt="section 9 image" />
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col product-name">Smartphone 6S 32GB LTE</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col hidden-element">kkkk</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col mode">$2100,00 &nbsp;<span class="discount-price">$3299,00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-2">
+                        <div class="row">
+                            <div class="col section-9-head mb-2 mode">Top Rated Products</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <hr class="mt-0 pt-0 mode">
+                            </div>
+                        </div>
+                        <div class="row my-4 section-9-container">
+                            <div class="col pe-5 section-9-card">
+                                <div class="row">
+                                    <div class="col-4"><img src="image/section-9 img-9.PNG" alt="section 9 image" />
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col product-name">Smartwatch 2.0 LTE Wifi Waterproof</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col"><i class="fa-solid fa-star" style="color: #f3d439;"></i><i
+                                                    class="fa-solid fa-star" style="color: #f3d439;"></i><i
+                                                    class="fa-solid fa-star" style="color: #f3d439;"></i><i
+                                                    class="fa-solid fa-star" style="color: #f3d439;"></i><i
+                                                    class="fa-solid fa-star" style="color: #f3d439;"></i>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col mode">$725,00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4 section-9-container">
+                            <div class="col pe-5 section-9-card">
+                                <div class="row">
+                                    <div class="col-4"><img src="image/section-9 img-8.PNG" alt="section 9 image" />
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col product-name">22Mps Camera 6200U with 500GB SDcard</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <i class="fa-solid fa-star" style="color: #f3d439;"></i><i
+                                                    class="fa-solid fa-star" style="color: #f3d439;"></i><i
+                                                    class="fa-solid fa-star" style="color: #f3d439;"></i><i
+                                                    class="fa-solid fa-star" style="color: #f3d439;"></i><i
+                                                    class="fa-regular fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col mode">$2999,00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4 section-9-container">
+                            <div class="col pe-5 section-9-card">
+                                <div class="row">
+                                    <div class="col-4"><img src="image/section-9 img-7.PNG" alt="section 9 image" />
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col product-name">Full Color Laserjet Pro M452dn</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col"><i class="fa-solid fa-star" style="color: #f3d439;"></i><i
+                                                    class="fa-solid fa-star" style="color: #f3d439;"></i><i
+                                                    class="fa-solid fa-star" style="color: #f3d439;"></i><i
+                                                    class="fa-solid fa-star" style="color: #f3d439;"></i><i
+                                                    class="fa-regular fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col mode">$439,00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="desktop-footer">
+
+        <section class="footer-1 py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="row pt-2">
+                            <div class="col-1 me-2"><i class="fa-regular fa-paper-plane"></i></div>
+                            <div class="col-10">Sign up to Newsletter</div>
+                        </div>
+                    </div>
+                    <div class="col-4 pt-2">...and receive <strong>$20 coupon for first shopping.</strong></div>
+                    <div class="col-5">
+                        <div class="input-group">
+                            <input type="text" class="footer-search" placeholder="Enter your email address"
+                                aria-label="Input group example" aria-describedby="btnGroupAddon">
+                            <button class="input-group-text footer-search-btn bg-secondary px-3" id="btnGroupAddon">Sign
+                                Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer-2 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                        <div><img src="image/logo.PNG" alt="logo image" /></div>
+                        <div class="row my-4">
+                            <div class="col-2"><i class="fa-solid fa-headphones"></i></div>
+                            <div class="col-10">
+                                <div class="row">
+                                    <div class="col fs-6 mode">
+                                        Got questions? Call us 24/7!
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col fw-bold mode">
+                                        (800) 8001-8588, (0600) 874 548
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col">
+                                <div class="mode"><strong>Contact info</strong></div>
+                                <div class="mode">17 Princess Road, London, Greater London NW1 8JR, UK</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col footer-icon">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-rss"></i></a>
+                                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                                <a href="#"><i class="fa-brands fa-flickr"></i></a>
+                                <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3 mode"><strong>Find it Fast</strong></div>
+                                <div class="mb-2 mode">Laptops & Computers</div>
+                                <div class="mb-2 mode">Cameras & Photography</div>
+                                <div class="mb-2 mode">Smart Phones & Tablet</div>
+                                <div class="mb-2 mode">Video Games & Consoles</div>
+                                <div class="mb-2 mode">TV & Audio</div>
+                                <div class="mb-2 mode">Gadgets</div>
+                                <div class="mode">Car Electronic & GPS</div>
+                            </div>
+                            <div class="col mt-4">
+                                <div class="mt-3 mb-2 mode">Smart Phones & Tablet</div>
+                                <div class="mb-2 mode">Video Games & Consoles</div>
+                                <div class="mb-2 mode">TV & Audio</div>
+                                <div class="mb-2 mode">Gadgets</div>
+                                <div class="mb-2 mode">Car Electronic & GPS</div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-3 mode"><strong>Find it Fast</strong></div>
+                                <div class="mb-2 mode">Laptops & Computers</div>
+                                <div class="mb-2 mode">Cameras & Photography</div>
+                                <div class="mb-2 mode">Smart Phones & Tablet</div>
+                                <div class="mb-2 mode">Video Games & Consoles</div>
+                                <div class="mb-2 mode">TV & Audio</div>
+                                <div class="mb-2 mode">Gadgets</div>
+                                <div class="mode">Car Electronic & GPS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer-3">
+            <div class="container d-flex justify-content-between py-2">
+                <div>&copy; <strong>Electro</strong> - All rights Reserved</div>
+                <div class="d-flex flex-row-reverse">
+                    <div><i class="fa-brands fa-cc-mastercard text-danger"></i></div>
+                    <div><i class="fa-brands fa-cc-visa text-danger"></i></div>
+                    <div><i class="fa-brands fa-cc-paypal text-danger"></i></div>
+                    <div><i class="fa-brands fa-cc-mastercard text-danger"></i></div>
+                </div>
+            </div>
+        </section>
+
+    </footer>
+
+    <footer class="small-screen-footer">
+        <section class="sm-footer-1">
+            <div class="container py-2">
+                <div class="input-group my-3">
+                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                        <option selected>We Recommend</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+
+                <div class="input-group my-3">
+                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                        <option selected>We Recommend</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+
+                <div class="input-group my-3">
+                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                        <option selected>We Recommend</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+
+                <div class="input-group my-3">
+                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                        <option selected>We Recommend</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+
+                <div class="footer-icon">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fas fa-rss"></i></a>
+                    <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fa-brands fa-flickr"></i></a>
+                    <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sm-footer-2 py-3">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <div><img src="image/logo.PNG" alt="logo image" /></div>
+                <div class="text-white fs-6">Got questions? Call us 24/7!</div>
+                <div class="text-white">(800) 8001-8588,</div>
+                <div class="text-white">(0600) 874 548</div>
+            </div>
+        </section>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
