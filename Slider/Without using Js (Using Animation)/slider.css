@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(245, 152, 152);
+}
+
+.heading{
+    text-align: center;
+}
+
+.main{
+    width: 50%;
+    height: 80%;
+    box-shadow: 2px 3px 10px 5px black;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(https://images.businessupturn.com/wp-content/uploads/2023/05/Untitled-design-19-3.jpg);
+    background-size: 100% 100%;
+    animation: slider 5s infinite ease-out;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: backwards;
+    
+}
+
+@keyframes slider {
+    0%{
+        background-image: url(https://images.businessupturn.com/wp-content/uploads/2023/05/Untitled-design-19-3.jpg);
+        
+    }
+    
+    50%{
+        /* background-image: url(https://images.businessupturn.com/wp-content/uploads/2023/05/Untitled-design-19-3.jpg); */
+        background-image: url(https://static.india.com/wp-content/uploads/2023/08/chandrayaan.jpg);
+        background-size: 100% 100%;
+
+    }
+}
